@@ -36,7 +36,7 @@ const edit=(e)=>{
 const search=()=>{
 
     if(!searchval){
-        alert("ENTER VALLED INPUT")
+        alert("Enter valid input")
     return
       }
    axios.get(`http://localhost:8800/searchresult/${searchval}`).then(getted=>{setList(getted.data)}
