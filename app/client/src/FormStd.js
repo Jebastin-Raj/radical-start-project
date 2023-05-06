@@ -15,7 +15,10 @@ const [education,setEducation]=useState();
 const [location,setLocation]=useState();
 console.log(birthDay)
 const Postapi=()=>{
-
+  if(!fname || !lname || !gmail || !birthDay || !education || !location) {
+    alert("fill all fields");
+    return;
+  }
   axios.post('http://localhost:8800/postdata',{fname:fname,lname:lname,gmail:gmail,location:location,birthDay:birthDay,education:education})
 .then(()=>(console.log("data send succesfully")))}
 
